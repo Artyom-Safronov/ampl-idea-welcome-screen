@@ -1,0 +1,54 @@
+header(class="flex items-center")
+  h1(class="text-7xl font-semibold mr-6") Amplicode
+  div(class="text-2xl leading-10") makes the development of Spring based web applications<br />more productive and enjoyable
+hr(class="mt-5")
+main(class="mt-8")
+  article(class="flex")
+    div(class="w-6/12")
+      div Amplicode offers maximum support for projects utilizing Spring Data<br />and React Admin for administrative UI.
+      figure(class="mt-5 inline-block")
+        a(href="")
+          img(src="./preview-of-video-yotube.png", alt="Amplicode preview youtube video")
+      section(class="mt-5")
+        h3(class="text-3xl font-semibold mr-3") Documentation & Guides
+        ul(class="mt-4")
+          each doc in documentation_and_guides
+            li(class="flex my-2")
+              img(src=doc.icon.src, alt=doc.icon.alt class="mr-2")
+              a(href= doc.link.href)
+                span=doc.title 
+    div(class="w-6/12")
+      section(class="flex")
+        div(class="w-6/12")
+          h3(class="text-3xl font-semibold mr-3") Communications
+          ul(class="mt-4")
+            li(class="flex my-4")
+              img(src="./icons/Globe.svg", alt="Globe icon" class="mr-2")
+              a(href="https://amplicode.ru/")
+                span Official website
+            li(class="flex items-start my-4")
+              img(src="./icons/Telegram-chat.svg", alt="Telegram chat icon" class="mr-2")
+              span Support and feedback:<br /><a href="https://t.me/amplicode_chat" target="_blank">@amplicode_chat</a>
+            li(class="flex items-start my-4")
+              img(src="./icons/Mail.svg", alt="Mail icon" class="mr-2")
+              span Direct inquiries, request a demo for<br />your team: <a href="mailto:info@amplicode.io"> info@amplicode.io</a>
+        div(class="w-6/12")
+          h3(class="text-3xl font-semibold mr-3") Join Us
+          ul(class="mt-4")
+            each contact in join_us
+              li(class="flex my-3")
+                img(src=contact.icon.src, alt=contact.icon.alt class="mr-2")
+                a(href= contact.link.href)
+                  span=contact.title 
+      section
+        div
+          h3(class="text-3xl font-semibold mr-3") Suggestions
+      section
+        div
+          h3(class="text-3xl font-semibold mr-3") Licensing and Updates
+            ul(class="mt-4")
+              li(class="flex my-2")
+                img(src="", alt="" class="mr-2")
+                | Amplicode Version:
+                a(href="")
+                  span="" 

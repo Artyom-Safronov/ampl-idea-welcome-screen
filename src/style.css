@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'SFProText-Medium';
+    src: url('../fonts/SFProText-Light.ttf');
+    font-weight: 400;
+    font-style: 400;
+}
+
+/* @font-face {
+    font-family: 'SFProText-Light';
+    src: url('../fonts/SFProText-Light.ttf');
+    font-weight: 300;
+    font-style: 300;
+} */
+
+html {
+    font-family: 'SFProText-Medium'
+}
+
+:root {
+    --link-color: #5A4FCF;
+}
+
+a {
+    color: var(--link-color);
+}
