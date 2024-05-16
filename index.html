@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/Amplicode.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="__THEME__">
+    <div class="container max-w-screen-2xl p-10 m-auto relative">
+      <pug src="index.pug" />
+      <div class="absolute bottom-14 right-10 hidden">
+        <span
+          class="inline-flex items-center justify-center w-5 h-5 mr-2 bg-slate-200 border-solid border-gray-900 border-2 cursor-pointer"
+          data-hide="false"
+        >
+        <span data-checked class="hidden w-[12px] h-[12px] bg-slate-700"></span>
+      </span>
+        Do not show this screen again
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+header(class="flex items-center")
+  h1(class="text-7xl font-semibold mr-6") Amplicode
+  div(class="text-2xl leading-10 max-w-2xl") makes the development of Spring based web&nbsp;applications more&nbsp;productive and enjoyable
+hr(class="mt-5")
+main(class="mt-8")
+  article(class="flex")
+    div(class="w-6/12")
+      div(class="max-w-xl") Amplicode offers maximum support for projects utilizing Spring&nbsp;Data and&nbsp;React&nbsp;Admin for administrative UI.
+      figure(class="mt-5 inline-block")
+        a(href="https://youtu.be/g5kzePtZ9FQ?si=ZpKogVLi2vwFhFDQ" target="_blank")
+          img(src="./preview-of-video-yotube.png", alt="Amplicode preview youtube video")
+      section(class="mt-5")
+        h3(class="text-3xl font-semibold mr-3") Documentation & Guides
+        ul(class="mt-8")
+          each doc in documentation_and_guides
+            li(class="flex my-3")
+              span(class="mr-2") !{doc.icon.src}
+              a(href= doc.link.href)
+                span=doc.title 
+    div(class="w-6/12 pl-10")
+      section(class="flex contacts")
+        div(class="w-6/12")
+          h3(class="text-3xl font-semibold mr-3") Communications
+          ul(class="flex flex-col h-[176px] justify-around mt-3")
+            li(class="flex")
+              span(class="mr-2") !{icons.Globe}
+              a(href="https://amplicode.ru/")
+                span Official website
+            li(class="flex items-start relative top-[2px]")
+              span(class="mr-2") !{icons['Telegram-chat']}
+              span Support and feedback: <a href="https://t.me/amplicode_chat" target="_blank">@amplicode_chat</a>
+            li(class="flex items-start relative top-[3px]")
+              span(class="mr-2") !{icons.Mail}
+              span Direct inquiries, request a demo&nbsp;for your team: <a href="mailto:info@amplicode.io"> info@amplicode.io</a>
+        div(class="w-6/12 pl-12")
+          h3(class="text-3xl font-semibold mr-3") Join Us
+          ul(class="flex flex-col h-[176px] justify-around mt-3")
+            each contact in join_us
+              li(class="inline-flex")
+                span(class="mr-2") !{contact.icon.src}
+                a(href=contact.link.href)
+                  span=contact.title 
+      section(class="mt-8")
+        div
+          h3(class="text-3xl font-semibold mr-3") Suggestions
+          ul(class="mt-4")
+            each suggestion in suggestions
+              li(class="flex my-4")
+                span(class="mr-2") !{suggestion.icon.src}
+                a(href="" data-action=suggestion.link.action)=suggestion.title 
+      section(class="mt-8")
+        div
+          h3(class="text-3xl font-semibold mr-3") Licensing and Updates
+          ul(class="mt-4")
+            li(class="flex my-2")
+              span(class="mr-2") !{icons.Amplicode}
+              strong(class="font-semibold") Amplicode&nbsp;Version:
+              a(href="" class="text-nowrap") &nbsp;2024.4.EAP&nbsp;[License]&nbsp;[update is available]
