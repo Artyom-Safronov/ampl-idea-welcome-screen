@@ -19,6 +19,7 @@
 :root {
     --link-color: #5A4FCF;
     --link-color-dark: rgb(76, 166, 255);
+    --background-dark: #27282c;
     ;
 }
 
@@ -30,20 +31,44 @@ html {
 body {
     color: #000;
 
-    &.theme-dark {
-        color: rgba(255, 255, 255, 0.60);
+    &::-webkit-scrollbar {
+        width: 14px!important
     }
-}
+    
+    &::-webkit-scrollbar-track {
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #ccc!important;
+        width: 8px!important;
+        border: 3px solid #fff!important;
+        border-radius: 8px!important
+    }
 
-.theme-dark {
-    background: #27282c;
+    &.theme-dark {
+        background: #27282c;
+        color: rgba(255, 255, 255, 0.60);
+
+        &::-webkit-scrollbar {
+            background: var(--background-dark)!important;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: var(--background-dark)!important;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: rgba(84,84,84,.7)!important;
+            border: 3px solid var(--background-dark)!important;
+        }
+    }
 }
 
 .container {
     box-sizing: border-box;
     width: 100%;
     max-width: 1600px;
-    min-width: 1140px;
+    /* min-width: 718px; */
     margin-right: auto;
     margin-left: auto;
 }
@@ -67,59 +92,3 @@ svg {
 [data-hide="true"]>[data-checked] {
     display: block;
 }
-
-@media screen and (max-width: 1276px) {
-    html {
-        font-size: 16px;
-    }
-
-    .container {
-        max-width: 996px;
-    }
-
-    .contacts {
-        flex-direction: column;
-
-        &>div {
-            width: 100%;
-            padding-left: 0;
-
-            &:last-of-type {
-                margin-top: 32px;
-            }
-        }
-    }
-}
-
-/* @media screen and (max-width: 960px) {
-    .container {
-        max-width: 100%;
-
-        & article {
-            flex-direction: column;
-
-            & div {
-                width: 100%;
-                max-width: unset;
-                padding-left: 0;
-
-                img {
-                    width: 100%;
-                }
-            }
-
-        }
-
-        .contacts ul {
-            height: auto;
-
-            & li {
-                margin: 0.75rem 0;
-            }
-        }
-    }
-
-    figure {
-        width: 100%;
-    }
-} */
